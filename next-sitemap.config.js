@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://yourdomain.com',
+  siteUrl: 'https://developercard.me',
   generateRobotsTxt: true,
   changefreq: 'daily',
   priority: 0.7,
