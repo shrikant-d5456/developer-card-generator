@@ -2,7 +2,7 @@
 
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import React, { useState } from "react";
-import { ProfileData, ThemeColors } from "../types/data";
+import { ProfileData, ThemeColors } from "../../../../types/data";
 import { VscEllipsis, VscFiles } from "react-icons/vsc";
 import { FiFile, FiX } from "react-icons/fi";
 
