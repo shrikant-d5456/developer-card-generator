@@ -1,11 +1,12 @@
 'use client';
-import React from "react";
+import React, { useEffect } from "react";
 import { FiFile, FiX, FiDownload, FiCopy } from "react-icons/fi";
-import { VscFiles, VscEllipsis } from "react-icons/vsc";
+import { VscFiles, VscEllipsis, VscGlobe } from "react-icons/vsc";
 import { ProfileData, ThemeColors } from "../../../../types/data";
 import { toast } from 'sonner';
 import * as htmlToImage from "html-to-image";
 import DownloadCardPreview from './DownloadCardPreview';
+import { div } from "framer-motion/client";
 
 function sanitizeColor(color: string) {
   if (!color) return '#000';
@@ -16,15 +17,23 @@ function sanitizeColor(color: string) {
 
 export default function CardPreview({ data, themeColors }: {
   data: ProfileData; themeColors: ThemeColors
-}) {
+}) 
+{
   const [displayCardPreview, setDisplayCardPreview] = React.useState(false);
 
   const [cardTheme, setCardTheme] = React.useState(true);
+  const [cardLoading, setCardLoading] = React.useState(false);
+
+  useEffect(() => {
+    setCardLoading(true);
+    const timer = setTimeout(() => {
+      setCardLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [data,  cardTheme]);
 
   const downloadImage = async () => {
-    // Show the preview card before generating the image
-   
-
     // Wait a frame to ensure the preview is rendered into the DOM
     await new Promise((resolve) => requestAnimationFrame(() => resolve(null)));
 
@@ -47,7 +56,7 @@ export default function CardPreview({ data, themeColors }: {
       link.click();
 
       toast.success("Card downloaded successfully!");
-       setDisplayCardPreview(true);
+      setDisplayCardPreview(true);
     } catch (error) {
       console.error("Error generating image:", error);
       toast.error("Download Error!");
@@ -56,7 +65,6 @@ export default function CardPreview({ data, themeColors }: {
       setTimeout(() => setDisplayCardPreview(false), 10000);
     }
   };
-
 
   let CardPreviewTheme = cardTheme
     ? {
@@ -103,7 +111,7 @@ export default function CardPreview({ data, themeColors }: {
   return (
     <div className="flex flex-col gap-4 w-[600px] font-sans ml-8">
       {
-        displayCardPreview && 
+        displayCardPreview &&
         <div className="fixed w-full h-screen bg-black/80 bg-blur left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 z-50">
           <div className=" w-full h-full flex justify-center items-center">
             <DownloadCardPreview data={data} themeColors={themeColors} />
@@ -111,14 +119,16 @@ export default function CardPreview({ data, themeColors }: {
         </div>
       }
       <div className="flex gap-3 justify-between items-center">
-        <button
-          id='card-settings'
-          onClick={toggleCardTheme}
-          aria-pressed={!cardTheme}
-          className="border border-blue-500 text-gray-200 text-xs font-medium rounded-lg hover:border-blue-700 transition-all px-2 py-1 "
-        >
-          {cardTheme ? 'Use Background Image' : 'Use Gradient Background'}
-        </button>
+
+        <label id='card-settings' className="inline-flex items-center me-5 cursor-pointer">
+          <input type="checkbox" value="" className="sr-only peer border-2 border-e-gray-400"
+            onClick={toggleCardTheme}
+            aria-pressed={!cardTheme}
+          />
+          <div className="relative w-9 h-5 bg-neutral-quaternary   rounded-full peer  peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+          <span className=" text-gray-400 ms-3 text-sm font-medium text-heading">{cardTheme ? 'Use Background Image' : 'Use Gradient Background'}</span>
+        </label>
+
         <span className="text-sm text-gray-400">(current: {cardTheme ? 'Gradient' : 'Image'})</span>
 
       </div>
@@ -128,9 +138,17 @@ export default function CardPreview({ data, themeColors }: {
         style={CardPreviewTheme}
         onClick={() => bigPreviewImg()}
       >
-        <div id='generate' className=" relative group  rounded-lg shadow-2xl overflow-hidden ">
+        {
+            cardLoading ? (
+              <div className=" absolute flex items-center justify-center bg-black/10 pr-4">
+              <p className=" text-white font-semibold text-sm text-shadow-lg  z-50">Updating card Style<span className=" absolute animate-spin mt-[1px]">🌟</span> </p>
+              </div>
+             ) : ""
+          }
+        <div id='generate' className={` ${cardLoading ? ' cursor-progress animate-pulse blur-2xl' : ''} relative group  rounded-lg shadow-2xl overflow-hidden `}>
           <div className=" -top-52 h-[920px] w-20 bg-linear-to-r from-white/10 via-white/50 to-white/10 absolute blur-sm -rotate-45  -left-30 group-hover:left-[200%] duration-500 delay-200" />
           {/* Title Bar */}
+          
           <div className="bg-[#0d0d0d] px-4 py-3 flex items-center justify-between border-b-2 border-[#262626]">
             <div className=" w-full flex items-center justify-between gap-2">
               <div className="flex gap-1.5">
@@ -247,10 +265,10 @@ export default function CardPreview({ data, themeColors }: {
               <span>✓ Ready</span>
               <span>Ln 1, Col 1</span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center gap-4">
               <span>UTF-8</span>
-              <span>React</span>
               <span>JSX</span>
+              <span className="flex items-center gap-1"><VscGlobe/> developercard.me</span>
             </div>
           </div>
         </div>

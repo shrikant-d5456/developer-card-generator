@@ -34,7 +34,7 @@ export default function Form({ data, setData }: FormProps) {
     e.preventDefault();
 
     if (!formData.name || !formData.role || !formData.email || !formData.linkedin) {
-      toast.info("Please fill in all required fields, developer!");
+      toast.info("Please fill in all required fields, with * mark !");
       return;
     }
 
@@ -60,7 +60,7 @@ export default function Form({ data, setData }: FormProps) {
         <input
           type="text"
           name="name"
-          placeholder="name/@username"
+          placeholder="name/@username *"
           value={formData.name}
           className="w-full text-white bg-black/20 py-2 px-4  text-sm border border-gray-800 rounded-lg mb-4 focus:outline-blue-900 focus:outline focus:outline-offset"
           onChange={handleChange}
@@ -70,7 +70,7 @@ export default function Form({ data, setData }: FormProps) {
           <input
             type="text"
             name="email"
-            placeholder="email address"
+            placeholder="email address *"
             value={formData.email}
             className=" w-full text-white bg-black/20 py-2 px-4  text-sm border border-gray-800 rounded-lg mb-4 focus:outline-blue-900 focus:outline focus:outline-offset"
             onChange={handleChange}
@@ -78,7 +78,7 @@ export default function Form({ data, setData }: FormProps) {
           <input
             type="text"
             name="role"
-            placeholder="role/title"
+            placeholder="role/title *"
             value={formData.role}
             className=" w-full text-white py-2 px-4  text-sm border border-gray-800 rounded-lg mb-4 focus:outline-blue-900 focus:outline focus:outline-offset"
             onChange={handleChange}
@@ -88,7 +88,7 @@ export default function Form({ data, setData }: FormProps) {
         <input
           type="text"
           name="linkedin"
-          placeholder="linkedin URL"
+          placeholder="linkedin URL *"
           value={formData.linkedin}
           className=" w-full text-white py-2 px-4  text-sm border border-gray-800 rounded-lg mb-4 focus:outline-blue-900 focus:outline focus:outline-offset"
           onChange={handleChange}

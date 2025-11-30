@@ -10,10 +10,7 @@ export const metadata : Metadata = {
     "Create a developer card - share your profile, links, and contact info in one beautiful card.",
   applicationName: "Developer Card",
   keywords: [
-    "developer card generator",
-    "developer portfolio",
-    "profile card generator",
-    "profile.dev",
+    "developer card me, my portfolio card, profile card generator, share profile links, social card, dev identity card"
   ],
   openGraph: {
     title: "Developer Card - Create Your Dev Card",

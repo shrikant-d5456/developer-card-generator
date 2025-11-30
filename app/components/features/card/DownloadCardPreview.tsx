@@ -26,8 +26,8 @@ export default function DownloadCardPreview({ data, themeColors }: {
     }
 
     function resetTilt() {
-        rotateX.set(14);
-        rotateY.set(14);
+        rotateX.set(1);
+        rotateY.set(1);
     }
 
     return (
@@ -37,6 +37,55 @@ export default function DownloadCardPreview({ data, themeColors }: {
                     <div key={i} className="confetti" />
                 ))}
             </div>
+
+            <motion.div
+                initial={{ y: -200, opacity: 0, rotateX: 10, rotateY: 10 }}
+                animate={{
+                    y: 0,
+                    opacity: 1,
+                    rotateX: 10,
+                    rotateY: 0,
+                    transition: {
+                        type: "spring",
+                        stiffness: 120,
+                        damping: 14,
+                        duration: 1.5
+                    }
+                }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 140, damping: 50 }}
+                className=" lg:hidden block w-[300px] rounded-2xl cursor-pointer shadow-white animate-pulse z-50 bg-black/50"
+            >
+
+                <div className=" w-full shadow-2xl shadow-white  rounded-b-lg mb-2 ">
+                    <div className=" w-full flex items-center justify-between gap-2">
+                        <div className="flex gap-1 items-center p-2">
+                            <div className="w-2 h-2 rounded-full bg-[#ff6b6b]"></div>
+                            <div className="w-2 h-2 rounded-full bg-[#ffd93d]"></div>
+                            <div className="w-2 h-2 rounded-full bg-[#6bcf7f]"></div>
+
+                            <span className="text-[#e0e0e0] text-xs ml-2 font-semibold">developercard.me</span>
+                        </div>
+                    </div>
+                    <div className="bg-[#1a1a1a] w-full flex items-center justify-between border-b-2 border-[#1f1f1f]">
+                        <div className=" w-full flex items-center gap-2 px-3 py-2 text-xs bg-[#0d0d0d]/90 border-r border-[#101010] text-[#ffffff] font-medium">
+                            <FiFile className="text-[#64b5f6]" size={14} />
+                            <span>response.jsx</span>
+                        </div>
+
+                    </div>
+                   <div className="text-xs font-mono text-white px-4 py-2 opacity-90 ">
+                     {'{'}
+                    <p className=" pl-4">
+                        status: <span className=" text-green-500">"success"</span>, <br />
+                        message: <span className=" text-yellow-500">"thank you"</span>, <br />
+                        mood: <span className=" text-pink-500">"grateful"</span>
+                        <br />
+                    </p>
+                    {'}'}
+                   </div>
+                </div>
+            </motion.div>
 
             <motion.div
                 initial={{ y: -200, opacity: 0, rotateX: 10, rotateY: -10 }}
@@ -54,7 +103,7 @@ export default function DownloadCardPreview({ data, themeColors }: {
                 }}
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 140, damping: 10 }}
-                className="relative w-[500px]  rounded-2xl cursor-pointer "
+                className="lg:block relative hidden w-[500px]  rounded-2xl cursor-pointer "
                 style={{ rotateX, rotateY }}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={() => setIsHovering(true)}
@@ -75,7 +124,7 @@ export default function DownloadCardPreview({ data, themeColors }: {
                     <p className=" text-sm font-mono text-white">
                         status: <span className=" text-green-500">"success"</span>,
                         message: <span className=" text-yellow-500">"thank you"</span>,
-                        mood: <span className=" text-pink-500">"grateful"</span> 
+                        mood: <span className=" text-pink-500">"grateful"</span>
                     </p>
                 </div>
 

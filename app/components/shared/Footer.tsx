@@ -17,10 +17,10 @@ export default function Footer() {
         {/* LEFT SECTION */}
         <div className="space-y-5 max-w-xl">
           <div className="flex items-center gap-3">
-            <div className="bg-linerar-to-br from-blue-400 to-blue-600 p-2 rounded-lg shadow-lg">
+            <div className="bg-linear-to-br from-blue-400 to-blue-600 p-2 rounded-lg shadow-lg">
               <VscCode />
             </div>
-            <span className="text-xl font-medium">DevCard</span>
+            <span className="text-xl font-semibold">developercard.me</span>
           </div>
 
           <h2 className="text-xl font-semibold">
@@ -41,7 +41,7 @@ export default function Footer() {
 
           <div className="custom-card">
 
-            <span className="custom-card-blob "></span>
+            <span className="custom-card-blob bg-transparent "></span>
             <div className="custom-card-inner  flex flex-col gap-3 w-[300px]">
               <p className="text-gray-200">✨ Special Thanks,</p>
               <hr className="border-white/10" />
@@ -53,22 +53,20 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className=" flex gap-4 items-center">
-            {/* YouTube */}
+          {/* <div className=" flex gap-4 items-center">
             <i className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all shadow-[0_0_25px_-8px_rgba(255,255,255,0.4)]">
             <a href="#" target="_blank" aria-label="YouTube Profile" rel="noopener noreferrer"><FaYoutube size={18} /></a>
             </i>
 
-            {/* X */}
+           
             <i className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all shadow-[0_0_25px_-8px_rgba(255,255,255,0.4)]">
             <a href="#" target="_blank" aria-label="Twitter Profile" rel="noopener noreferrer"><FaXTwitter size={18} /></a>
             </i>
 
-            {/* LinkedIn */}
             <i className="p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all shadow-[0_0_25px_-8px_rgba(255,255,255,0.4)]">
             <a href="#" target="_blank" aria-label="LinkedIn Profile" rel="noopener noreferrer"><FaLinkedinIn size={18} /></a>
-            </i>
-          </div>
+            </i>   
+          </div> */}
 
         </div>
       </div>

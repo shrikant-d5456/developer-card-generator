@@ -25,8 +25,8 @@ export default function HereSection(): React.JSX.Element {
           {/* Navbar */}
           <nav className="flex items-center justify-between py-6">
             <div className="flex items-center gap-3">
-              <div className=" text-xl lg:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-blue-900">
-                DevCard
+              <div className=" text-xl lg:text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-blue-900">
+                developercard.me
               </div>
               <span className="inline-flex items-center text-xs px-2 py-1 bg-yellow-400 text-black rounded-full font-medium shadow-sm">
                 v1
@@ -35,7 +35,7 @@ export default function HereSection(): React.JSX.Element {
 
             <div className="flex items-center gap-3">
               <i className="text-sm p-2 rounded-full border border-gray-700/60 backdrop-blur-sm hover:bg-white/5 transition">
-                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub Profile" rel="noopener noreferrer"><VscGithub size={20} /></a>
+                <a href="https://github.com/shrikant-d5456/developer-card-generator" target="_blank" aria-label="GitHub Profile" rel="noopener noreferrer"><VscGithub size={20} /></a>
               </i>
             </div>
           </nav>
@@ -72,7 +72,7 @@ export default function HereSection(): React.JSX.Element {
 
             <h1 className="text-4xl md:text-6xl lg:font-bold leading-tight">
               <span className="text-white">Free </span>
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-500 via-blue-400 to-blue-600">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-600 via-blue-400 to-blue-600">
                 Developer Card </span>Generator
             </h1>
 
@@ -93,7 +93,7 @@ export default function HereSection(): React.JSX.Element {
 
               <button
                 onClick={handleStartTour}
-                className={`${btnRipple ? "btn_ripple" : ""} inline-flex items-center justify-center md:px-6 md:py-3 px-4 py-2 rounded-full bg-black/30 border border-white/10 shadow-sm mb-6`}
+                className={`${btnRipple ? "btn_ripple" : ""} cursor-pointer inline-flex items-center justify-center md:px-6 md:py-3 px-4 py-2 rounded-full bg-black/30 border border-white/10 shadow-sm mb-6`}
               >
                 <span className="mr-3 text-lg">🏃🏻‍♂️‍➡️</span>
                 <span className="text-gray-200">Show Steps</span>

@@ -75,7 +75,7 @@ const ThemeSelector = ({ themeColors, setThemeColors }: { themeColors: any; setT
         </div>
       </div>
 
-      <div id="theme-selector" className="flex items-center justify-between mb-4">
+      <div  className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-bold text-white">Gradient Theme</h3>
         <div className="flex gap-2">
           <button
@@ -91,7 +91,7 @@ const ThemeSelector = ({ themeColors, setThemeColors }: { themeColors: any; setT
       </div>
 
       {/* Direction Selector */}
-      <div className='w-full grid lg:grid-cols-4 items-center gap-2'>
+      <div id="theme-selector" className='w-full grid lg:grid-cols-4 items-center gap-2'>
         <div className='flex justify-between items-center p-2 border border-gray-800 rounded-lg '>
           <label htmlFor="theme" className="sr-only">Theme Direction</label>
           <select

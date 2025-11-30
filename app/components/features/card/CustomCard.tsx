@@ -50,11 +50,11 @@ const CustomCard = ({
 
         {/* Footer */}
         <div className="flex justify-between items-center mt-6 lg:w-full w-[300px] ">
-          <div className="flex gap-3 items-center z-20 ">
+          <div className="flex gap-3 items-center font-semibold z-20 ">
             {currentStep > 0 && (
               <button
                 onClick={prevStep}
-                className="px-4 py-2 text-sm  bg-gray-700 hover:bg-gray-600 rounded-lg"
+                className="px-4 py-2 text-sm  bg-gray-700 hover:bg-gray-600 rounded-lg cursor-pointer"
               >
                 Previous
               </button>
@@ -62,14 +62,14 @@ const CustomCard = ({
             {step.showSkip && (
               <button
                 onClick={skipTour}
-                className=" text-gray-400 hover:text-gray-200 text-sm px-4 py-2 border rounded-xl "
+                className=" text-gray-400 hover:text-gray-200 text-sm px-4 py-2 border rounded-xl cursor-pointer"
               >
                 Skip
               </button>
             )}
             <button
               onClick={nextStep}
-              className="px-4 py-2 text-sm  bg-blue-600 hover:bg-blue-500 rounded-lg"
+              className="px-4 py-2 text-sm  bg-blue-600 hover:bg-blue-500 rounded-lg cursor-pointer"
             >
               {currentStep === totalSteps - 1 ? 'Finish' : 'Next'}
             </button>

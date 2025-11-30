@@ -125,13 +125,13 @@ export default function TipsFAQAndMore() {
           Frequently Asked Questions
         </div>
 
-        <div className="text-sm mt-6 space-y-4">
+        <div className="text-sm mt-6 space-y-4 ">
 
           {faq.map((item, index) => (
-            <div key={index} className="border-b border-white/10 pb-3">
+            <div key={index} className="border-b border-white/10 pb-3 ">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex justify-between items-center text-left text-gray-200 text-lg"
+                className="w-full flex justify-between items-center text-left text-gray-200 text-lg cursor-pointer"
               >
                 {item.q}
                 <span>{openIndex === index ? <VscChevronUp /> : <VscChevronDown />}</span>
