@@ -34,7 +34,7 @@ const CustomCard = ({
         {/* Header */}
         <div className="flex items-center gap-4 mb-5">
           {step.icon && (
-            <div className="text-xl p-2 rounded-xl bg-white/10 shadow-inner">
+            <div className="text-xl p-2 rounded-xl bg-white/10 shadow-inner ">
               {step.icon}
             </div>
           )}
@@ -46,7 +46,7 @@ const CustomCard = ({
           {step.content}
         </div>
 
-        {arrow && <div className="mb-4">{arrow}</div>}
+        {arrow && <div>{arrow}</div>}
 
         {/* Footer */}
         <div className="flex justify-between items-center mt-6 lg:w-full w-[300px] ">

@@ -21,7 +21,8 @@ const Home = () => {
       });
     
     return (
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 lg:w-11/12 mx-auto ">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:w-11/12 mx-auto "
+        >
             <div>
                 <Form data={data} setData={setData} />
                 <ThemeSelector themeColors={themeColors} setThemeColors={setThemeColors} />

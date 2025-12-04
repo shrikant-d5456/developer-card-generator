@@ -18,14 +18,18 @@ export default function HereSection(): React.JSX.Element {
   return (
     <>
       {/* <BuyMeACoffee bottom={24} right={24} /> */}
-      <header className=" relative flex items-center justify-center text-white mb-20 overflow-hidden">
+      <header className=" relative flex items-center justify-center text-white overflow-hidden p-2"
+       style={{
+      background: "radial-gradient(at 40% 88%, #000000 0px, transparent 50%), radial-gradient(at 40% 14%, #000000 0px, transparent 50%), radial-gradient(at -111% 60.04166634877523%, #84dfff 0px, transparent 60%), radial-gradient(at 94.0301722493665% -51%, #516beb 0px, transparent 50%), #000"
+    }}
+      >
         {/* Decorative corner glow */}
         <ShootingStars />
         <div className="container mx-auto px-2 lg:px-20 relative z-10">
           {/* Navbar */}
           <nav className="flex items-center justify-between py-6">
             <div className="flex items-center gap-3">
-              <div className=" text-xl lg:text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-blue-900">
+              <div className=" text-xl lg:text-2xl font-bold tracking-tight bg-linear-to-tl from-blue-500 via-blue-400 to-blue-600 bg-clip-text text-transparent">
                 developercard.me
               </div>
               <span className="inline-flex items-center text-xs px-2 py-1 bg-yellow-400 text-black rounded-full font-medium shadow-sm">
@@ -78,7 +82,7 @@ export default function HereSection(): React.JSX.Element {
 
             <p className="mt-6 text-sm md:text-xl text-gray-300 leading-relaxed">
               Create stunning developer profile cards in seconds with{" "}
-              <strong>DevCard</strong>. Customize gradients, avatar, skills,
+              <strong>developercard.me</strong>. Customize gradients, avatar, skills,
               social links, and export high-resolution images or embeddable code
               for your portfolio and GitHub profile.
             </p>
@@ -88,7 +92,7 @@ export default function HereSection(): React.JSX.Element {
                 href="#generate"
                 className="inline-flex items-center gap-3 md:px-6 md:py-3 px-4 py-2 rounded-full bg-linear-to-r from-blue-500 to-blue-500 hover:scale-[1.02] transform transition shadow-lg text-white font-semibold"
               >
-                ✨ Generate Your DevCard
+                ✨ Generate Your developer card
               </a>
 
               <button
@@ -96,7 +100,7 @@ export default function HereSection(): React.JSX.Element {
                 className={`${btnRipple ? "btn_ripple" : ""} cursor-pointer inline-flex items-center justify-center md:px-6 md:py-3 px-4 py-2 rounded-full bg-black/30 border border-white/10 shadow-sm mb-6`}
               >
                 <span className="mr-3 text-lg">🏃🏻‍♂️‍➡️</span>
-                <span className="text-gray-200">Show Steps</span>
+                <span className="text-gray-200 font-semibold">Show Steps</span>
               </button>
             </div>
 

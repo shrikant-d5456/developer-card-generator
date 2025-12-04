@@ -6,7 +6,6 @@ import { ProfileData, ThemeColors } from "../../../../types/data";
 import { toast } from 'sonner';
 import * as htmlToImage from "html-to-image";
 import DownloadCardPreview from './DownloadCardPreview';
-import { div } from "framer-motion/client";
 
 function sanitizeColor(color: string) {
   if (!color) return '#000';
@@ -141,7 +140,7 @@ export default function CardPreview({ data, themeColors }: {
         {
             cardLoading ? (
               <div className=" absolute flex items-center justify-center bg-black/10 pr-4">
-              <p className=" text-white font-semibold text-sm text-shadow-lg  z-50">Updating card Style<span className=" absolute animate-spin mt-[1px]">🌟</span> </p>
+              <p className=" text-white font-semibold text-sm text-shadow-lg  z-50">updating card style<span className=" absolute animate-spin mt-[1px]">🌟</span> </p>
               </div>
              ) : ""
           }

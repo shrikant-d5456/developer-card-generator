@@ -5,9 +5,9 @@ export const steps: Tour[] = [
         tour: 'mainTour',
         steps: [
             {
-                title: 'Welcome to DevCard!',
+                title: 'Welcome to developercard.me!',
                 content:
-                    "Let's get started with DevCard! This tour will guide you through the main features.",
+                    "Let's get started with developercard.me! This tour will guide you through the main features.",
                 selector: '#step1',
                 icon: 'ℹ️',
                 showControls: false,

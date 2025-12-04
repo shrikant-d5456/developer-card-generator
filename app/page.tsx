@@ -4,7 +4,7 @@ import Footer from "./components/shared/Footer";
 import TipsFAQAndMore from "./components/shared/TipsFAQAndMore";
 import Home from "./home/Home";
 
-export const metadata : Metadata = {
+export const metadata: Metadata = {
   title: "Developer Card - Create Your Dev Card",
   description:
     "Create a developer card - share your profile, links, and contact info in one beautiful card.",
@@ -19,7 +19,7 @@ export const metadata : Metadata = {
     siteName: "Developer Card",
     images: [
       {
-        url: "https://developercard.me/og-image.png",
+        url: "/favicon.png",
         width: 1200,
         height: 630,
       },
@@ -31,30 +31,30 @@ export const metadata : Metadata = {
     card: "summary_large_image",
     title: "Developer Card",
     description: "Create and download your developer card",
-    images: ["https://developercard.me/og-image.png"],
+    images: ["/favicon.png"],
   },
   alternates: {
     canonical: "https://developercard.me",
   },
   icons: {
-    icon: '/window.svg',
-    apple: '/window.svg',
+    icon: '/favicon.png',
+    apple: '/favicon.png',
   }
 };
 
 export default function Page() {
   return (
-        <main className=" w-full bg-[#0a0909] lg:p-10 p-2">
-          <header className="w-full">
-            <HeroSection />
-          </header>
-          <section className=" w-full">
-            <Home/>
-          </section>
-          <TipsFAQAndMore />
-          <footer>
-             <Footer />
-          </footer>        
-        </main>
+    <main className=" w-full bg-black ">
+      <header className="w-full">
+        <HeroSection />
+      </header>
+      <section className=" w-full py-20"    >
+        <Home />
+      </section>
+      <TipsFAQAndMore />
+      <footer>
+        <Footer />
+      </footer>
+    </main>
   );
 }

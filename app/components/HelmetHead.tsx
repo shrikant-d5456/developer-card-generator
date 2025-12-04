@@ -18,21 +18,21 @@ export default function HelmetHead({ title, description, keywords, image }: { ti
 
   {/* Canonical URL (avoid duplicate content) */}
   <link rel="canonical" href={"https://developercard.me"}  />
-  <link rel="icon" href="/profile-card.png"/>
+  <link rel="icon" href="/favicon.png.png"/>
 
   {/* Open Graph (Facebook, LinkedIn) */}
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={"https://developercard.me"} />
-  <meta property="og:image" content={image || "/profile-card.png"} />
-  <meta name="twitter:image" content={image || "/profile-card.png"} />
+  <meta property="og:image" content={image || "/favicon.png.png"} />
+  <meta name="twitter:image" content={image || "/favicon.png.png"} />
 
   {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={image || "/profile-card.png"} />
+  <meta name="twitter:image" content={image || "/favicon.png.png"} />
 </Helmet>
 
   );

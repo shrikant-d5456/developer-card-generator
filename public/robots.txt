@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Sitemap: https://yourdomain.com/sitemap.xml
-Host: https://yourdomain.com
+
+# Host
+Host: https://developercard.me
+
+# Sitemaps
+Sitemap: https://developercard.me/sitemap.xml
