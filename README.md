@@ -90,7 +90,7 @@ Your work helps developers build better, faster, and with more creativity. ❤�
 
 ## 📌 Tech & Deployment
 
-> *(Optional — fill if relevant)*  
+>
 Built using **Next.js**, **TailwindCSS**, and deployed on **Vercel**.
 
 ---
