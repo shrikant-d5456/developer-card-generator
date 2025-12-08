@@ -80,7 +80,7 @@ const ThemeSelector = ({ themeColors, setThemeColors }: { themeColors: any; setT
         <div className="flex gap-2">
           <button
             onClick={handleShuffle}
-            className="flex items-center gap-2 px-3 py-2 bg-linear-to-r from-blue-500 to-blue-500 text-gray-200 rounded-lg hover:bg-blue-600 transition-all"
+            className="flex items-center gap-2 px-3 py-2 bg-linear-to-r from-blue-500 to-blue-800  text-gray-200 rounded-lg hover:bg-blue-600 transition-all"
           id='shuffle'
           >
             <FiShuffle size={16} />
@@ -107,7 +107,7 @@ const ThemeSelector = ({ themeColors, setThemeColors }: { themeColors: any; setT
         </div>
 
         {/* From Color */}
-        <label className=" text-white hover:bg-blue-500 transition-all flex w-full justify-between items-center gap-3 overflow-hidden py-2 px-4 rounded-lg border border-gray-800 cursor-pointer ">
+        <label className=" text-white hover:bg-linear-to-r from-blue-800 to-cyan-600  transition-all flex w-full justify-between items-center gap-3 overflow-hidden py-2 px-4 rounded-lg border border-gray-800 cursor-pointer ">
           <span className="text-sm ">From</span>
           <div className="flex items-center gap-3">
             <input
@@ -121,7 +121,7 @@ const ThemeSelector = ({ themeColors, setThemeColors }: { themeColors: any; setT
         </label>
 
         {/* Via Color */}
-        <label className=" text-white hover:bg-blue-500 transition-all flex w-full justify-between items-center gap-3 overflow-hidden py-2 px-4 rounded-lg border border-gray-800 cursor-pointer ">
+        <label className=" text-white hover:bg-linear-to-r from-blue-800 to-cyan-600  transition-all flex w-full justify-between items-center gap-3 overflow-hidden py-2 px-4 rounded-lg border border-gray-800 cursor-pointer ">
           <span className="text-sm ">Via</span>
           <div className="flex items-center gap-3">
             <input
@@ -137,7 +137,7 @@ const ThemeSelector = ({ themeColors, setThemeColors }: { themeColors: any; setT
 
 
         {/* To Color */}
-        <label className=" text-white hover:bg-blue-500 transition-all flex w-full justify-between items-center gap-3 overflow-hidden py-2 px-4 rounded-lg border border-gray-800 cursor-pointer ">
+        <label className=" text-white hover:bg-linear-to-r from-blue-800 to-cyan-600  transition-all flex w-full justify-between items-center gap-3 overflow-hidden py-2 px-4 rounded-lg border border-gray-800 cursor-pointer ">
           <span className="text-sm ">To</span>
           <div className="flex items-center gap-3">
             <input

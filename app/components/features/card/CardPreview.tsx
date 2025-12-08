@@ -277,7 +277,7 @@ export default function CardPreview({ data, themeColors }: {
         <button
           id="card-preview"
           onClick={downloadImage}
-          className="flex items-center justify-center gap-2 md:ml-0 bg-blue-500 text-gray-200 hover:bg-blue-600 px-6 py-3 rounded-lg transition-all shadow-lg font-medium"
+          className="flex items-center justify-center gap-2 md:ml-0  bg-linear-to-r from-blue-500 to-blue-800  text-gray-200 font-bold px-6 py-3 rounded-lg "
         >
           <FiDownload size={18} />
           <span>Download Card</span>

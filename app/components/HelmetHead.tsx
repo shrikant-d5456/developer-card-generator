@@ -2,38 +2,60 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export default function HelmetHead({ title, description, keywords, image }: { title?: string; description?: string; keywords?: string; image?: string }) {
+interface HelmetHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string | string[];
+  image?: string;
+  url?: string;
+  author?: string;
+  type?: string;
+}
+
+export default function HelmetHead({
+  title = "Developer Card — Create Your Dev Card",
+  description = "Create a developer card — share your profile, links, and contact info in one beautiful card.",
+  keywords = "developer card generator, developer card me, profile card, my developer card, share links card",
+  image = "/favicon.png",
+  url = "https://developercard.me",
+  author = "developercard.me",
+  type = "website",
+}: HelmetHeadProps) {
+  const keywordsString = Array.isArray(keywords) ? keywords.join(", ") : keywords;
+
   return (
     <Helmet>
-  {/* Basic SEO */}
-  {title && <title>{title}</title>}
-  {description && <meta name="description" content={description} />}
-  {keywords && <meta name="keywords" content={keywords} />}
+      {/* Basic SEO */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywordsString} />
 
-  {/* Author */}
-  <meta name="author" content="developercard.me" />
+      {/* Author & Robots */}
+      <meta name="author" content={author} />
+      <meta name="robots" content="index, follow" />
 
-  {/* Robots (for crawl instructions) */}
-  <meta name="robots" content="index, follow" />
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+      <link rel="icon" href={image} />
 
-  {/* Canonical URL (avoid duplicate content) */}
-  <link rel="canonical" href={"https://developercard.me"}  />
-  <link rel="icon" href="/favicon.png.png"/>
+      {/* Open Graph (Facebook, LinkedIn) */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Developer Card" />
 
-  {/* Open Graph (Facebook, LinkedIn) */}
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={"https://developercard.me"} />
-  <meta property="og:image" content={image || "/favicon.png.png"} />
-  <meta name="twitter:image" content={image || "/favicon.png.png"} />
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
 
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={image || "/favicon.png.png"} />
-</Helmet>
-
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+    </Helmet>
   );
 }

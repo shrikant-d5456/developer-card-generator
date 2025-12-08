@@ -68,7 +68,7 @@ export default function Form({ data, setData }: FormProps) {
 
         <div className=" lg:flex gap-4 ">
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="email address *"
             value={formData.email}
@@ -105,7 +105,7 @@ export default function Form({ data, setData }: FormProps) {
 
         <button
           type="submit"
-          className=" w-full lg:w-fit flex items-center justify-center gap-2 px-3 py-2 bg-linear-to-r from-blue-500 to-blue-500 text-gray-200 rounded-lg hover:bg-blue-600 transition-all"
+          className=" w-full lg:w-fit flex items-center justify-center gap-2 px-3 py-2 bg-linear-to-r from-blue-500 to-blue-800 text-gray-200 rounded-lg hover:bg-blue-600 transition-all"
         >
           <span className="text-sm font-semibold">Let’s Generate Your Dev Card!</span>
           <VscSend size={18} className="-rotate-45  " />

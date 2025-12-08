@@ -5,6 +5,7 @@ import { steps } from "../library/step";
 import CustomCard from "./components/features/card/CustomCard";
 import { Toaster } from "sonner";
 import ReactLenis from "lenis/react";
+import HelmetHead from "./components/HelmetHead";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Metadata handled by Next.js `metadata` export in this file (server-side) */}
+        <HelmetHead
+          title="Developer Card — Create Your Dev Card"
+          description="Create a developer card — share your profile, links, and contact info in one beautiful card."
+          keywords={[
+            "developer card generator",
+            "developer card me",
+            "profile card",
+            "my developer card",
+            "share links card",
+          ]}
+          image="/favicon.png"
+          url="https://developercard.me"
+          author="developercard.me"
+          type="website"
+        />
         <ReactLenis root options={{ smoothWheel: true, lerp: 0.2 }}>
           <Toaster richColors position="top-center" />
           <NextStepProvider>

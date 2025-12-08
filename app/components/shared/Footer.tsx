@@ -24,11 +24,11 @@ export default function Footer() {
             Thanks for visiting developercard.me!
           </h2>
 
-          <p className="text-gray-400 leading-relaxed">
+          <p className="text-gray-200 leading-relaxed">
             developercard.me is an open-source project created to help developers showcase their skills and projects in a visually appealing way. If you found it useful, consider supporting its development and future enhancements.
           </p>
 
-          <p className="text-sm text-gray-500 pt-4">
+          <p className="text-sm text-gray-200 pt-4">
             ©{new Date().getFullYear()} developercard.me. All rights reserved.
           </p>
         </div>
