@@ -13,7 +13,7 @@ interface HelmetHeadProps {
 }
 
 export default function HelmetHead({
-  title = "Developer Card — Create Your Dev Card",
+  title = "Developer Card — Create Your Developer Card",
   description = "Create a developer card — share your profile, links, and contact info in one beautiful card.",
   keywords = "developer card generator, developer card me, profile card, my developer card, share links card",
   image = "/favicon.png",

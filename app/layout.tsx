@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <HelmetHead
-          title="Developer Card — Create Your Dev Card"
+          title="Developer Card — Create Your Developer Card"
           description="Create a developer card — share your profile, links, and contact info in one beautiful card."
           keywords={[
             "developer card generator",
