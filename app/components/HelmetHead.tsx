@@ -29,14 +29,21 @@ export default function HelmetHead({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywordsString} />
-
+      <meta name="apple-mobile-web-app-title" content="DevCard" />
       {/* Author & Robots */}
       <meta name="author" content={author} />
       <meta name="robots" content="index, follow" />
 
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      <link rel="icon" href={image} />
+
+      <meta name="apple-mobile-web-app-title" content="DevCard" />
+      <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+
 
       {/* Open Graph (Facebook, LinkedIn) */}
       <meta property="og:title" content={title} />
